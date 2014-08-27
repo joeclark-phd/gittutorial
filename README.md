@@ -132,14 +132,9 @@ If the master branch has been changed in the meantime, however, there may be con
 
 Just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whatever) to determine what the file ought to look like.  In this case it's easy, because the only difference is an addition.  If both paragraphs had different versions of the new paragraph, or an even more complicated conflict, you'd have to decide what to keep and what to delete.  Once your changes are made, you make an ordinary commit, and the master branch will be up to date.
 
-TODO: use `git pull` to get latest updates from teammates?
+- Possibly interesting: type `gitk` for a kind of graphical interface that will show you the "map" of branches and merges in your project.
 
-TODO: how to use `git checkout` and `git pull` to work with multiple branches and resolve merge conflicts
-
-TODO: the git-flow branching model we'll use for the team, including `git tag`
-
-
-
+When you use `git push origin master` it only pushes the master branch to GitHub, so your teammates will never have to worry about, or be bothered by, all the alternative branches you've created on your personal computer.  So branch away!
 
 
 
