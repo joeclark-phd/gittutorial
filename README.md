@@ -45,16 +45,26 @@ This repository is open source, so feel free to try it.  This will create a new 
 
 - SSH is recommended over HTTPS but takes some setup.  [More info here](https://help.github.com/articles/generating-ssh-keys).
 
-### Getting information about your repo
-
-TODO: more on `git gui`, `git status`, `git remote`, and `git log` and variations
 
 ### Working locally
 
 Your repo is a folder/directory on your computer which contains your files.  There's nothing unusual about it except that it contains a hidden folder called `.git` which keeps all the data used by Git.  This is nice because you can do all your work locally -- including referencing older versions, switching branches, etc -- without needing to connect to a remote server.  The only time you even need Internet access is when you want to push changes to GitHub for others to work with.  *Git can be used without GitHub or any other centralized server.*
 
+Git keeps a history of "commits" which are snapshots of your project over time.  The `git log` commmand can be used to see who committed them, when, and what message they gave to explain the commit.  Add `-n` with a number to limit how many log entries you see:
+
+    `git log -n 3`
+
+![](screenshots/gitlog.png)
+
+To see a cleaner version of the log, add the parameter `--pretty=oneline`.
+
+![](screenshots/gitlog2.png)
+
+
+
 TODO: how to use `git add` and `git commit`
 
+TODO: more on `git gui`, `git status`, `git remote`, and `git log` and variations
 TODO: using `git push` to push commits to GitHub
 
 ### Working with multiple branches
