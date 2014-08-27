@@ -133,8 +133,10 @@ If the master branch has been changed in the meantime, however, there may be con
 Just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whatever) to determine what the file ought to look like.  In this case it's easy, because the only difference is an addition.  If both paragraphs had different versions of the new paragraph, or an even more complicated conflict, you'd have to decide what to keep and what to delete.  Once your changes are made, you make an ordinary commit, and the master branch will be up to date.
 
 - Possibly interesting: type `gitk` for a kind of graphical interface that will show you the "map" of branches and merges in your project.
+- When you use `git push origin master` it only pushes the master branch to GitHub, so your teammates will never have to worry about, or be bothered by, all the alternative branches you've created on your personal computer.  So branch away!
+- When you reach a milestone, you can "name" a commit, so instead of the gobbledygook characters that normally identify it, it can be called something like "v0.1".  Use `git tag v0.1` to do this.
 
-When you use `git push origin master` it only pushes the master branch to GitHub, so your teammates will never have to worry about, or be bothered by, all the alternative branches you've created on your personal computer.  So branch away!
+
 
 
 
