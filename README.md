@@ -60,12 +60,39 @@ To see a cleaner version of the log, add the parameter `--pretty=oneline`.
 
 ![](screenshots/gitlog2.png)
 
+Files in your working folder can be in one of three states:
 
+- unchanged from the last commit
+- changed in the working directory, but not staged for commit
+- staged and ready for the next commit
 
-TODO: how to use `git add` and `git commit`
+If you type `git status` with a new repo,  you'll probably see that the working directory is "clean" meaning nothing has changed since the last commit.  Go ahead and edit a file in the folder, then type `git status` again.  This is what I'm seeing right now, after creating this section of the tutorial:
 
-TODO: more on `git gui`, `git status`, `git remote`, and `git log` and variations
-TODO: using `git push` to push commits to GitHub
+![](screenshots/gitstatus.png)
+
+One file has been changed and two new ones have been added since the last commit.  A more succinct version of this output can be seen if you type `git status -s`:
+
+![](screenshots/gitstatus2.png)
+
+If I want to commit those files, I need to `git add` them to the index, and *then* `git commit` them for the permanent record.  You can type `git add <filename>` for each and every modified file, but it's easier to just type `git add -A` to stage every new or changed file for the next commit.
+
+![](screenshots/gitadd.png)
+
+Green means the files are indexed and ready to be committed.  You don't have to commit every change, but it's a good practice to make frequent, small commits rather than occasional big ones.  The reason is that it makes it easier to see exactly when and where something entered the project (i.e. a bug); that's difficult when each commit includes a dozen unrelated changes.  Every commit needs a short message.  Type something like the following, but more informative:
+
+    git commit -m 'this is my commit message'
+
+![](screenshots/gitcommit.png)
+
+It's important to remember that you are still working locally.  The latest commit is now permanently saved, so you can go back to it, or merge it with another branch, and you can continue working on the files without fear of losing or changing something that you really liked.  However, the latest commit is not yet shared with your teammates or the world.  For that, we need a central, public server like those provided by GitHub.com.
+
+To push to your repo on GitHub, type:
+
+    git push origin master
+
+FYI, `master` is the "branch" you're working on now, and `origin` is the GitHub repo which is associated with your local repo.  Now check GitHub and see your changes!
+
+- Note: `origin` is the repo which you cloned. If you created your own repo locally, before setting up a server, you'll need to associate your repo with the remote one by typing `git remote add origin <the repo's URL>` and then you should be able to `git push` as above.
 
 ### Working with multiple branches
 
