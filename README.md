@@ -124,6 +124,14 @@ Now if you make any changes, the files in the master branch will not be affected
 
 When you are finished with the new features, and want to merge them back into the master branch, you'll make a commit, then use `git checkout` to switch back to the master branch, then `git merge` to merge them.
 
+![](screenshots/gitmerge.png)
+
+If the master branch has been changed in the meantime, however, there may be conflicts between the two branches, and you'll get a message like the one above: "Automatic merge failed; fix conflicts and then commit the result."  If you look inside the modified files you'll see something like this:
+
+![](screenshots/mergeconflict.png)
+
+Just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whatever) to determine what the file ought to look like.  In this case it's easy, because the only difference is an addition.  If both paragraphs had different versions of the new paragraph, or an even more complicated conflict, you'd have to decide what to keep and what to delete.  Once your changes are made, you make an ordinary commit, and the master branch will be up to date.
+
 TODO: use `git pull` to get latest updates from teammates?
 
 TODO: how to use `git checkout` and `git pull` to work with multiple branches and resolve merge conflicts
