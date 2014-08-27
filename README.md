@@ -1,5 +1,5 @@
 
-# Professor Clark's GitHub Tutorial
+# Professor Clark's Git/GitHub Tutorial
 
 ###Purpose###
 
@@ -7,9 +7,9 @@ This is a guideline for my students to how we will be using Git/GitHub in class.
 
 ### Recommended reading/watching
 
-Ralf Ebert's screencast tutorial: http://vimeo.com/16395537
-Code School's interactive Git tutorial: http://try.github.io
-Vincent Driessen's Git branching model for team collaboration: http://nvie.com/posts/a-successful-git-branching-model/
+- Ralf Ebert's screencast tutorial: http://vimeo.com/16395537
+- Code School's interactive Git tutorial: http://try.github.io
+- Vincent Driessen's Git branching model for team collaboration: http://nvie.com/posts/a-successful-git-branching-model/
 
 ### Set up Git
 
