@@ -119,6 +119,8 @@ To create a new branch, type `git branch <new branch name>` like so:
 To switch to another branch, use `git checkout`:
 
     git checkout newfeature
+    
+Now if you make any changes, the files in the master branch will not be affected.  You can also commit the changes, and they stay in the branch, so each branch can have its own "history".
 
 TODO: use `git pull` to get latest updates from teammates?
 
