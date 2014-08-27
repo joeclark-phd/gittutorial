@@ -14,7 +14,21 @@ This is a guideline for my students to how we will be using Git/GitHub in class.
 
 ### Set up Git
 
-TODO: how to use `git config`
+First: Install Git (not GitHub) on your system.  
+
+- You can find the software here: http://www.git-scm.com/
+
+There are graphical user interfaces for Git, but we'll use the command line for this tutorial.  On a Mac or Linux computer, open a terminal.  From Windows, you can use the `cmd` command line, but Git will have installed its own Unix-like shell called **Git Bash** and I recommend you use it.
+
+Before using Git, you'll want to configure it with your name and e-mail.  Make sure this is the same e-mail address you used to create your GitHub account.
+
+    git config --global user.name "Sparky Sundevil"
+
+    git config --global user.email "sparky@asu.edu"
+
+Please don't actually use Sparky's name.
+
+!(screenshots/config.png)
 
 ### Clone your repository
 
