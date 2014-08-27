@@ -23,9 +23,6 @@ There are graphical user interfaces for Git, but we'll use the command line for 
 Before using Git, you'll want to configure it with your name and e-mail.  Make sure this is the same e-mail address you used to create your GitHub account.
 
     git config --global user.name "Sparky Sundevil"
-
- 
-
     git config --global user.email "sparky@asu.edu"
 
 Please don't actually use Sparky's name.
