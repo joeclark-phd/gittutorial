@@ -10,6 +10,7 @@ This is a guideline for my students to how we will be using Git/GitHub in class.
 - Ralf Ebert's screencast tutorial: http://vimeo.com/16395537
 - Code School's interactive Git tutorial: http://try.github.io
 - Vincent Driessen's Git branching model for team collaboration: http://nvie.com/posts/a-successful-git-branching-model/
+- GitHub's own (very short) tutorial: https://help.github.com/articles/set-up-git
 
 ### Set up Git
 
