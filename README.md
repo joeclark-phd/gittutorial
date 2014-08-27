@@ -52,7 +52,7 @@ Your repo is a folder/directory on your computer which contains your files.  The
 
 Git keeps a history of "commits" which are snapshots of your project over time.  The `git log` commmand can be used to see who committed them, when, and what message they gave to explain the commit.  Add `-n` with a number to limit how many log entries you see:
 
-    `git log -n 3`
+    git log -n 3`
 
 ![](screenshots/gitlog.png)
 
@@ -95,6 +95,34 @@ FYI, `master` is the "branch" you're working on now, and `origin` is the GitHub 
 - Note: `origin` is the repo which you cloned. If you created your own repo locally, before setting up a server, you'll need to associate your repo with the remote one by typing `git remote add origin <the repo's URL>` and then you should be able to `git push` as above.
 
 ### Working with multiple branches
+
+In my classes you'll be working with a team on a shared repository.  That means you will sometimes be making changes that need to be reconciled.  There are a couple of features of Git that enable this workflow.
+
+Let's look at the simplest case.  You and your team have not "branched" the code but are all working on the `master` branch, and someone has made some updates and pushed them to GitHub.  To get the latest commits, you'll use `git pull`:
+
+    git pull origin master
+
+Now your local copy of the repository is in sync with the GitHub version (but not necessarily with your teammates' private versions) and you can go ahead and make your own changes and commits to the project.  Use `git push` to share them with the team via GitHub when you're done.
+
+A more sophisticated workflow involves branching the code.  Each branch may have its own history of commits, so you can use a branch to work on a new feature without affecting the main (or master) repository.  Each team member can work in their own branch, so they don't interfere with each other.  When finished, you merge the "feature" branch back into the master branch.
+
+Vincent Driessen's [Git branching workflow](http://nvie.com/posts/a-successful-git-branching-model/), called "Git flow", is very popular and I'll use it in some of my classes.  For others, it's enough that you know how to make a branch to keep from stepping on your teammates' toes.
+
+To see what branches exist for your project, what's the latest commit for each branch, and which branch you're in (marked with a \*), type
+
+    git branch -v
+
+To create a new branch, type `git branch <new branch name>` like so:
+
+    git branch newfeature
+
+To switch to another branch, use `git checkout`:
+
+    git checkout newfeature
+    
+Now if you make any changes, the files in the master branch will not be affected.  You can also commit the changes, and they stay in the branch, so each branch can have its own "history".
+
+When you are finished with the new features, and want to merge them back into the master branch, you'll make a commit, then use `git checkout` to switch back to the master branch, then `git merge` to merge them.
 
 TODO: use `git pull` to get latest updates from teammates?
 
