@@ -24,6 +24,8 @@ Before using Git, you'll want to configure it with your name and e-mail.  Make s
 
     git config --global user.name "Sparky Sundevil"
 
+ 
+
     git config --global user.email "sparky@asu.edu"
 
 Please don't actually use Sparky's name.
