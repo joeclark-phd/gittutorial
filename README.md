@@ -28,7 +28,7 @@ Before using Git, you'll want to configure it with your name and e-mail.  Make s
 
 Please don't actually use Sparky's name.
 
-!(/screenshots/config.png)
+!(screenshots/config.png)
 
 ### Clone your repository
 
