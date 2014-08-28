@@ -183,4 +183,41 @@ This is a quick reference for how to use Git + GitHub for students in my classes
 
 Reference:  http://nvie.com/posts/a-successful-git-branching-model/
 
+When working on a new feature:
 
+1. Create a repo and clone it locally.
+    1. First time: use `git branch -v` to see if there is a `develop` branch yet.  If not, do `git checkout -b develop master` to create this branch, where your team will be doing its work.
+    2. If `develop` exists, use `git checkout develop` to make sure you're working in that branch.
+2. Before starting a new piece of work, use `git pull develop master` to get the latest changes from your teammates.
+3. Create a feature branch for something new you're working on with `git checkout -b myfeature develop`.  This is a branch off `develop`.
+4. Do all the work you want in the `myfeature` branch.  You can have more than one of these branches if you're working on different things.  The names of the branches don't matter because your teammates won't see them.
+5. When your feature is complete, merge it back into the `develop` branch:
+    1. First, `git pull develop master` so you have the latest version of `develop`.
+    2. Switch to the development branch with `git checkout develop`.
+    3. Merge in the feature with `git merge --no-ff myfeature`, resolving conflicts if necessary.
+    4. Share the new feature with your team by doing `git push origin develop`.
+    
+When you're ready to release a new version (as an assignment for credit):
+
+1. Make sure all teammates work, if it's ready, has been integrated into `develop` as above, and pushed to `origin` aka GitHub.
+2. Create a release prep branch from `develop`:
+    1. One person enters `git checkout -b release-0.1 develop` (or whatever the release number is).
+    2. Share it with the team by doing `git push origin release-0.1`.  
+    3. Everyone else can `git pull origin release-0.1` and switch to the release prep branch with `git checkout`.
+3. Make sure the release is satisfactory: 
+    1. Do all the testing you need and fix any bugs.
+    2. Update the README file.  
+    3. Make sure all team members have pushed their changes to GitHub with `git push origin release-0.1-develop`.
+4. Release the next version:
+    1. Switch to the release branch: `git checkout master`
+    2. Merge the prepared release in: `git merge --no-ff release-0.1` (fix conflicts if necessary)
+    3. Tag the release: `git tag -a 0.1`
+5. Prepare for the further development:
+    1. Switch back to the development branch: `git checkout develop`
+    2. Merge in any bug fixes or changes you made during release prep: `git merge --no-ff release-0.1`
+    3. Update everyone: `git push origin develop`
+    4. Everyone gets the update: `git pull origin develop`
+    5. Go back to step 1 and build more features branching off of `develop`
+    
+Final note: My grading for [CIS440](https://github.com/asu-cis-capstone) will be based on what I see in the `master` branch only, so you don't have to follow all these steps religiously.  However, you will still need to make sure your releases in `master` are "clean".  This is a proven way to do that well.
+    
