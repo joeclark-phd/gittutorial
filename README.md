@@ -93,6 +93,10 @@ You don't have to commit every change, but it's a good practice to make frequent
 
 ![](screenshots/gitcommit.png)
 
+Now this version of the code is stored in the history of the project.  You can go back to it, or others can fork (copy) your code from this point, or you can analyze the changes from one commit to the next.
+
+* To see the changes made in this commit (compared to the previous one), type `git show <commit>` where `<commit>` is the label of the commit (686ae67 in the screenshot above).  Every commit has a unique hash to label it.
+
 #### Pushing
 
 It's important to remember that you are still working locally.  The latest commit is now permanently saved, so you can go back to it, or merge it with another branch, and you can continue working on the files without fear of losing or changing something that you really liked.  However, the latest commit is not yet shared with your teammates or the world.  For that, we need a central, public server like those provided by GitHub.com.
