@@ -201,13 +201,13 @@ When you're ready to release a new version (as an assignment for credit):
 
 1. Make sure all teammates work, if it's ready, has been integrated into `develop` as above, and pushed to `origin` aka GitHub.
 2. Create a release prep branch from `develop`:
-    1. One person enters `git checkout -b release-0.1 develop` (or whatever the release number is).
+    1. One person enters `git checkout -b release-0.1 develop` (or whatever release number).
     2. Share it with the team by doing `git push origin release-0.1`.  
-    3. Everyone else can `git pull origin release-0.1` and switch to the release prep branch with `git checkout`.
+    3. Everyone else can `git pull origin release-0.1` and switch to the release prep branch with `git checkout release-0.1`.
 3. Make sure the release is satisfactory: 
     1. Do all the testing you need and fix any bugs.
     2. Update the README file.  
-    3. Make sure all team members have pushed their changes to GitHub with `git push origin release-0.1-develop`.
+    3. Make sure all team members have committed and pushed any needed changes to GitHub with `git push origin release-0.1`.
 4. Release the next version:
     1. Switch to the release branch: `git checkout master`
     2. Merge the prepared release in: `git merge --no-ff release-0.1` (fix conflicts if necessary)
