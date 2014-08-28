@@ -170,9 +170,9 @@ This is a quick reference for how to use Git + GitHub for students in my classes
 1. Create a repo on GitHub and clone it locally with `git clone`.
 2. Before sitting down to work, use `git pull origin master` to get the latest updates from your teammates.
 3. Do some work locally:
-    1. Change some files.
+    1. Add or change some files with whatever software you normally use.
     2. Stage the changes with `git add -A`.
-    3. Commit them with `git commit`.
+    3. Commit them with `git commit -m 'some message about the changes'`.
     4. Repeat.
 3. Upload your work to GitHub by typing `git push origin master`.
     - If someone else has pushed changes in the meantime, you'll get a message about conflicts.  In that case, do `git pull origin master`, fix the conflicts, `commit`, and `push`.
