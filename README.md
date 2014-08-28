@@ -72,9 +72,9 @@ If you type `git status` with a new repo,  you'll probably see that the working 
 
 One file has been changed and two new ones have been added since the last commit.  A more succinct version of this output can be seen if you type `git status -s`:
 
-#### Staging
-
 ![](screenshots/gitstatus2.png)
+
+#### Staging
 
 If I want to commit those files, I need to `git add` them to the index, and *then* `git commit` them for the permanent record.  You can type `git add <filename>` for each and every modified file, but it's easier to just type `git add -A` to stage every new or changed file for the next commit.
 
