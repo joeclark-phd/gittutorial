@@ -209,7 +209,7 @@ When you're ready to release a new version (as an assignment for credit):
     2. Update the README file.  
     3. Make sure all team members have committed and pushed any needed changes to GitHub with `git push origin release-0.1`.
 4. Release the next version:
-    1. Switch to the release branch: `git checkout master`
+    1. Switch to the release branch: `git checkout master`, making sure you have the latest release with `git pull origin master` if needed.
     2. Merge the prepared release in: `git merge --no-ff release-0.1` (fix conflicts if necessary)
     3. Tag the release: `git tag -a 0.1`
 5. Prepare for the further development:
