@@ -147,7 +147,7 @@ To switch to another branch, use `git checkout`:
     
 Now if you make any changes, the files in the master branch will not be affected.  You can also commit the changes, and they stay in the branch, so each branch can have its own "history".
 
-- To *create* a new branch from `master` and switch to it with one command, type `git checkout -b newfeature master`
+- To create a new branch from `master` and switch to it with one command, you could use `git checkout -b newfeature master`
 
 When you are finished with the new features, and want to merge them back into the master branch, you'll make a commit, then use `git checkout` to switch back to the master branch, then `git merge` to merge them.
 
