@@ -188,7 +188,7 @@ When working on a new feature:
 1. Create a repo and clone it locally.
     1. First time: use `git branch -v` to see if there is a `develop` branch yet.  If not, do `git checkout -b develop master` to create this branch, where your team will be doing its work.
     2. If `develop` exists, use `git checkout develop` to make sure you're working in that branch.
-2. Before starting a new piece of work, use `git pull develop master` to get the latest changes from your teammates.
+2. Before starting a new piece of work, use `git pull origin develop` to get the latest changes from your teammates.
 3. Create a feature branch for something new you're working on with `git checkout -b myfeature develop`.  This is a branch off `develop`.
 4. Do all the work you want in the `myfeature` branch.  You can have more than one of these branches if you're working on different things.  The names of the branches don't matter because your teammates won't see them.
 5. When your feature is complete, merge it back into the `develop` branch:
