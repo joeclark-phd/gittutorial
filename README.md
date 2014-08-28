@@ -192,7 +192,7 @@ When working on a new feature:
 3. Create a feature branch for something new you're working on with `git checkout -b myfeature develop`.  This is a branch off `develop`.
 4. Do all the work you want in the `myfeature` branch.  You can have more than one of these branches if you're working on different things.  The names of the branches don't matter because your teammates won't see them.
 5. When your feature is complete, merge it back into the `develop` branch:
-    1. First, `git pull develop master` so you have the latest version of `develop`.
+    1. First, `git pull origin develop` so you have the latest version of `develop`.
     2. Switch to the development branch with `git checkout develop`.
     3. Merge in the feature with `git merge --no-ff myfeature`, resolving conflicts if necessary.
     4. Share the new feature with your team by doing `git push origin develop`.
