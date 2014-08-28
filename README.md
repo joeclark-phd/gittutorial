@@ -94,7 +94,7 @@ FYI, `master` is the "branch" you're working on now, and `origin` is the GitHub 
 
 - Note: `origin` is the repo which you cloned. If you created your own repo locally, before setting up a server, you'll need to associate your repo with the remote one by typing `git remote add origin <the repo's URL>` and then you should be able to `git push` as above.
 
-#### Working collaboratively
+### Working collaboratively
 
 In my classes you'll be working with a team on a shared repository.  That means you will sometimes be making changes that need to be reconciled.  There are a couple of features of Git that enable this workflow.
 
@@ -104,7 +104,7 @@ Let's look at the simplest case.  You and your team have not "branched" the code
 
 If there were no conflicts (that is to say, if the commits in your local repo are all in the "history" of the GitHub repo), you will be now be up-to-date with the version on GitHub.  You can go ahead and make your own changes and commits to the project.  Use `git push` to share them with the team via GitHub when you're done.  If there are conflicts (i.e., you've been making commits of your own in parallel with teammates), you'll be asked to resolve the conflicts and make a new commit.
 
-## Resolving conflicts
+#### Resolving conflicts
 
 If you look inside the modified files you'll see something like this:
 
@@ -112,7 +112,7 @@ If you look inside the modified files you'll see something like this:
 
 To resolve the conflicts, just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whatever) to determine what the file ought to look like.  In this case it's easy, because the only difference is an addition.  If both paragraphs had different versions of the new paragraph, or an even more complicated conflict, you'd have to decide what to keep and what to delete.  Once your changes are made, you make an ordinary commit, and the master branch will be up to date.  It would be wise to then `git push` so that your teammates can see the resolved files on GitHub.
 
-## Branching
+### Branching
 
 A more sophisticated workflow involves branching the code.  Each branch may have its own history of commits, so you can use a branch to work on a new feature without affecting the main (or master) repository.  Each team member can work in their own branch, so they don't interfere with each other.  When finished, you merge the "feature" branch back into the master branch.
 
