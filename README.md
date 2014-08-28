@@ -78,7 +78,12 @@ If I want to commit those files, I need to `git add` them to the index, and *the
 
 ![](screenshots/gitadd.png)
 
-Green means the files are indexed and ready to be committed.  You don't have to commit every change, but it's a good practice to make frequent, small commits rather than occasional big ones.  The reason is that it makes it easier to see exactly when and where something entered the project (i.e. a bug); that's difficult when each commit includes a dozen unrelated changes.  Every commit needs a short message.  Type something like the following, but more informative:
+Green means the files are indexed and ready to be committed.  
+
+- Note: For newbies the `git add` step is the most confusing.  Why can't you just modify some files and then commit?  I suppose it's because you might have some changes in one file (i.e. a bug fix) that are ready for commit, but other changes in other files that aren't ready.  Only the "staged" files will be bundled into the next commit.  For now, just make `git add` a part of your workflow and assume it has a good reason.
+- Note: Sometimes you want to prevent certain files from being accidentally staged, like system temporary files, or compiled Java or Python bytecode.  To do this, drop a `.gitignore` file in the top level of the repo.  Sample `.gitignore` files can be found here: https://github.com/github/gitignore
+
+You don't have to commit every change, but it's a good practice to make frequent, small commits rather than occasional big ones.  The reason is that it makes it easier to see exactly when and where something entered the project (i.e. a bug); that's difficult when each commit includes a dozen unrelated changes.  Every commit needs a short message.  Type something like the following, but more informative:
 
     git commit -m 'this is my commit message'
 
