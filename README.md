@@ -94,7 +94,7 @@ FYI, `master` is the "branch" you're working on now, and `origin` is the GitHub 
 
 - Note: `origin` is the repo which you cloned. If you created your own repo locally, before setting up a server, you'll need to associate your repo with the remote one by typing `git remote add origin <the repo's URL>` and then you should be able to `git push` as above.
 
-### Working collaboratively
+#### Working collaboratively
 
 In my classes you'll be working with a team on a shared repository.  That means you will sometimes be making changes that need to be reconciled.  There are a couple of features of Git that enable this workflow.
 
