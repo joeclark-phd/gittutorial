@@ -46,7 +46,7 @@ This repository is open source, so feel free to try it.  This will create a new 
 - SSH is recommended over HTTPS but takes some setup.  [More info here](https://help.github.com/articles/generating-ssh-keys).
 
 
-### Working locally
+### Working solo
 
 Your repo is a folder/directory on your computer which contains your files.  There's nothing unusual about it except that it contains a hidden folder called `.git` which keeps all the data used by Git.  This is nice because you can do all your work locally -- including referencing older versions, switching branches, etc -- without needing to connect to a remote server.  The only time you even need Internet access is when you want to push changes to GitHub for others to work with.  *Git can be used without GitHub or any other centralized server.*
 
@@ -94,7 +94,7 @@ FYI, `master` is the "branch" you're working on now, and `origin` is the GitHub 
 
 - Note: `origin` is the repo which you cloned. If you created your own repo locally, before setting up a server, you'll need to associate your repo with the remote one by typing `git remote add origin <the repo's URL>` and then you should be able to `git push` as above.
 
-### Working with multiple branches
+### Working collaboratively
 
 In my classes you'll be working with a team on a shared repository.  That means you will sometimes be making changes that need to be reconciled.  There are a couple of features of Git that enable this workflow.
 
