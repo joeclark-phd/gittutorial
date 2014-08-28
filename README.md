@@ -146,8 +146,24 @@ Just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whate
 - When you use `git push origin master` it only pushes the master branch to GitHub, so your teammates will never have to worry about, or be bothered by, all the alternative branches you've created on your personal computer.  So branch away!
 - When you reach a milestone, you can "name" a commit, so instead of the gobbledygook characters that normally identify it, it can be called something like "v0.1".  Use `git tag v0.1` to do this.
 
+### Summary of workflows for students
 
+This is a quick reference for how to use Git + GitHub for students in my classes.  There are two workflows, a simple one and a more professional one.
 
+#### Simple workflow for teams
 
+1. Create a repo on GitHub and clone it locally with `git clone`.
+2. Before sitting down to work, use `git pull origin master` to get the latest updates from your teammates.
+3. Do some work locally:
+    1. Change some files.
+    2. Stage the changes with `git add -A`.
+    3. Commit them with `git commit`.
+    4. Repeat.
+3. Upload your work to GitHub by typing `git push origin master`.
+    - If someone else has pushed changes in the meantime, you'll get a message about conflicts.  In that case, do `git pull origin master`, fix the conflicts, `commit`, and `push`.
+
+#### Git-flow workflow for teams
+
+Reference:  http://nvie.com/posts/a-successful-git-branching-model/
 
 
