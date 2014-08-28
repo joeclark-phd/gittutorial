@@ -102,11 +102,21 @@ Let's look at the simplest case.  You and your team have not "branched" the code
 
     git pull origin master
 
-Now your local copy of the repository is in sync with the GitHub version (but not necessarily with your teammates' private versions) and you can go ahead and make your own changes and commits to the project.  Use `git push` to share them with the team via GitHub when you're done.
+If there were no conflicts (that is to say, if the commits in your local repo are all in the "history" of the GitHub repo), you will be now be up-to-date with the version on GitHub.  You can go ahead and make your own changes and commits to the project.  Use `git push` to share them with the team via GitHub when you're done.  If there are conflicts (i.e., you've been making commits of your own in parallel with teammates), you'll be asked to resolve the conflicts and make a new commit.
+
+## Resolving conflicts
+
+If you look inside the modified files you'll see something like this:
+
+![](screenshots/mergeconflict.png)
+
+To resolve the conflicts, just correct the stuff between `<<<<<<< HEAD` and `>>>>>>> newfeature` (or whatever) to determine what the file ought to look like.  In this case it's easy, because the only difference is an addition.  If both paragraphs had different versions of the new paragraph, or an even more complicated conflict, you'd have to decide what to keep and what to delete.  Once your changes are made, you make an ordinary commit, and the master branch will be up to date.  It would be wise to then `git push` so that your teammates can see the resolved files on GitHub.
+
+## Branching
 
 A more sophisticated workflow involves branching the code.  Each branch may have its own history of commits, so you can use a branch to work on a new feature without affecting the main (or master) repository.  Each team member can work in their own branch, so they don't interfere with each other.  When finished, you merge the "feature" branch back into the master branch.
 
-Vincent Driessen's [Git branching workflow](http://nvie.com/posts/a-successful-git-branching-model/), called "Git flow", is very popular and I'll use it in some of my classes.  For others, it's enough that you know how to make a branch to keep from stepping on your teammates' toes.
+Vincent Driessen's [Git branching workflow](http://nvie.com/posts/a-successful-git-branching-model/), called "Git flow", is very popular and I'll use it in some of my classes.  For others, it's enough that you know how to make a branch to keep your experiments separate.  A small bug fix can be done in one branch that will soon be merged into the code, whereas a big new feature could be done in another branch that will not be merged until several weeks later when it's done.
 
 To see what branches exist for your project, what's the latest commit for each branch, and which branch you're in (marked with a \*), type
 
