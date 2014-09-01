@@ -219,5 +219,4 @@ When you're ready to release a new version (as an assignment for credit):
     4. Everyone gets the update: `git pull origin develop`
     5. Go back to step 1 and build more features branching off of `develop`
     
-Final note: My grading for [CIS440](https://github.com/asu-cis-capstone) will be based on what I see in the `master` branch only, so you don't have to follow all these steps religiously.  However, you will still need to make sure your releases in `master` are "clean".  This is a proven way to do that well.
-    
+Final note: My grading for [CIS440](https://github.com/asu-cis-capstone) will be based on what I see in the `master` branch only, so you don't have to follow all these steps strictly every time.  However, you will still need to make sure your releases in `master` are "clean".  This is a proven way to do that well.
