@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/joeclark-phd/gittutorial.svg?label=ready&title=Ready)](http://waffle.io/joeclark-phd/gittutorial) 
 
 # Professor Clark's Git/GitHub Tutorial
 
